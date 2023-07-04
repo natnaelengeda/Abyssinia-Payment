@@ -76,6 +76,16 @@ export const Payment = (req: Request, res: Response) => {
 }
 
 export const Notify = (req: Request, res: Response) => {
+  try {
+    const { req_transaction_uuid, decision } = req.body;
+    if (decision === 'ACCEPT') {
+
+    } else if (decision === 'DECLINE') {
+
+    }
+  } catch (error) {
+    console.log(error);
+  }
   console.log(req.body);
   // res.send('OK');
 }
